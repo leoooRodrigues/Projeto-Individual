@@ -1,32 +1,59 @@
-@font-face {
+@font-face{
     font-family: Bitter Bold;
     src: local(Bitter Bold) url(../assets/fonts/Bitter-Bold.ttf);
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: Bitter Bold;
 }
 
+.logo-header{
+    width: 80px;
+}
+
+h1{
+    font-size: 50px;
+    color: #d9e1e7;
+    margin-right: 175px;
+}
 .header{
+    display: inline-flex;
     background-color: #080411;
     width: 100%;
-    min-width: 800px;
     height: 100px;
-    position: fixed;
-    z-index: 1;
     top: 0;
+    position: fixed;
+    border-bottom: 0.5px #21173a solid;
 }
 
-.header .navbar li {
-    display: inline;
-    list-style: none;
-    cursor: pointer;
-} 
-
-.header .login-cadastro li{
-    display: inline;
-    list-style: none;
-    cursor: pointer;
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 5%;
 }
+
+.header .container .navbar li{
+    display: inline;
+    list-style: none;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-size: 20px;
+    color: #d9e1e7;
+
+}
+
+.header .container .navbar li a{
+    text-decoration: none;
+    color: #d9e1e7;
+
+}
+
+.header .container .navbar li .login{
+    font-weight: bold;
+}   
+
+

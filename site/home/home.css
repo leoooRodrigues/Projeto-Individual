@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Bitter Bold;
+    src: local(Bitter Bold) url(../assets/fonts/Bitter-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Bitter Bold;
+}

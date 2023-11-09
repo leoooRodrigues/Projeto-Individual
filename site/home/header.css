@@ -24,7 +24,7 @@ h1{
     width: 100%;
     height: 100px;
     top: 0;
-    position: fixed;
+    position: absolute;
     border-bottom: 0.5px #21173a solid;
 }
 

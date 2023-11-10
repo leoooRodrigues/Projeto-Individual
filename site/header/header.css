@@ -50,7 +50,7 @@ header .container-header .navbar{
 header .container-header .navbar li a{
     text-decoration: none;
     color: #d9e1e7;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 header .container-header .navbar li .login{
@@ -65,5 +65,9 @@ header .container-header .navbar li a:hover{
 
 #separacao_navbar{
     cursor: default;
+}
+
+.container-header .navbar li .menu{
+    font-family: 'Roboto Slab', serif;
 }
 

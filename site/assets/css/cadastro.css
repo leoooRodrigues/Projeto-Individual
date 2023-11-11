@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
+
 
 *{
     margin: 0;
@@ -8,12 +8,12 @@
 }
 
 body{
-    background-image: url(../assets/images/background-home.jpg);
+    background-image: url(../imgs/background-home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.container-body .box-cadastro{
+.box-cadastro {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -23,32 +23,50 @@ body{
     transform: translate(-50%,-50%);
     border-radius: 15px;
     color: white;
-    border: 81px rgba(27, 26, 26, 0.20) solid;
     font-size: 27px;
     align-items: center;
+    text-align: center;
+    width: 30%;
+    height: 698px;
+    justify-content: center;
+    gap: 52px;
+    box-shadow: 10px 0 25px 15px #130e1f;
 }
 
-.container-body .box-cadastro .input{
+.input{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 20px;
-    height: 2vh;
+    height: 31px;
+    text-align: center;
+    width: 371px;
+    border-bottom: 2px white solid;
+    background-color: rgba(27, 26, 26, 0.99);
 }
 
-.container-body .box-cadastro h2{
-    margin-top: -35px; 
-    font-family: 'Bitter', serif;
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: inherit;
+    font-family: 'Inter', sans-serif;
 }
 
-.container-body .box-cadastro p{
-    padding: 20px; 
-    font-family: 'Roboto Slab', serif;
+h2{
+    font-size: 60px;
 }
 
-.container-body .box-cadastro button{
-    padding: 10px;
-    font-family: 'Roboto Slab', serif;
+.botao{
+    width: 49%;
+    height: 46px;
+    border-radius: 20px;
+    align-self: center;
+    font-size: 21px;
+    font-weight: bolder;
 }
+
+
+
 
 

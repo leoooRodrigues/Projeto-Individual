@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .logo-header{
@@ -25,7 +26,7 @@ header{
     height: 100px;
     top: 0;
     position: absolute;
-    border-bottom: 0.5px #21173a solid;
+    border-bottom: 2px #21173a solid;
 }
 
 header .container-header{
@@ -66,5 +67,8 @@ header .container-header .navbar li a:hover{
 #separacao_navbar{
     cursor: default;
 }
+
+
+
 
 

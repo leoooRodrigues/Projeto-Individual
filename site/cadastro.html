@@ -9,7 +9,7 @@
     <title>Boxe Healthy</title>
 </head>
 <body>
-    <!-- ****** HEADER ****** -->
+    <!-- ****** Header ****** -->
     <header>
         <div class="container-header">
             <img class="logo-header" src="/assets/imgs/logo.png" alt="">
@@ -19,45 +19,47 @@
                 <ul>
                     <li><a class="menu" href="home.html">Início</a></li>
                     <li><a class="menu" href="#">Saiba mais</a></li>
-                    <li><a class="menu" href="#" style="display: none;">Quiz</a></li>
                     <li id="separacao_navbar">|</li>
                     <li><a class="login" href="#">Login</a></li>
                     <li><a class="login" href="cadastro.html" style="color: #cdbafc">Cadastrar </a></li>
+                    <li><a class="menu" href="#" style="display: none;">Quiz</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <!-- ****** FIM HEADER ****** -->
-    
+    <!-- ****** Fim Header ****** -->
+
     <main>
         <div class="container-body">
-            <div class="card-erro">
-
-                <div class="box-cadastro">
-                    <h2>Tela de cadastro</h2>
-                    <div class="formulario">
-                        <div class="campo">
-                            <p>Nome</p>
-                            <input placeholder="Seu nome" type="text" class="input" id="input_nome">
-                        </div>
-
-                        <div class="campo">
-                            <p>Email</p>
-                            <input placeholder="*****@provedor.com" class="input" type="text" id="input_email">
-                        </div>
-
-                        <div class="campo">
-                            <p>Senha</p>
-                            <input placeholder="*******" type="password"   class="input" id="input_senha">
-                        </div>
-
-                        <div class="campo">
-                            <p>Confirmar senha</p>
-                            <input placeholder="*******" type="password" class="input" id="input_confirmar_senha">
-                        </div>
-                        <button class="botao" onclick="cadastrar()">Cadastrar-se</button>
+            <!-- ****** Formulário ****** -->
+            <div class="box-cadastro">
+                <h2>Tela de cadastro</h2>
+                <div class="formulario">
+                    <div class="campo">
+                        <p>Nome</p>
+                        <input placeholder="Seu nome" type="text" class="input" id="input_nome">
                     </div>
+
+                    <div class="campo">
+                        <p>Email</p>
+                        <input placeholder="*****@provedor.com" class="input" type="text" id="input_email">
+                    </div>
+
+                    <div class="campo">
+                        <p>Senha</p>
+                        <input placeholder="*******" type="password"   class="input" id="input_senha">
+                    </div>
+
+                    <div class="campo">
+                        <p>Confirmar senha</p>
+                        <input placeholder="*******" type="password" class="input" id="input_confirmar_senha">
+                    </div>
+                    <button class="botao" onclick="cadastrar()">Cadastrar-se</button>
                 </div>
+            </div>
+            <!-- ****** Fim Formulário ****** -->
+            <div class="card-erro">
+                <span>alo</span>
             </div>
         </div>
     </main>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/imgs/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <title>Boxe Healthy</title>
+</head>
+<body>
+    <!-- ****** Header ****** -->
+    <header>
+        <div class="container-header">
+            <img class="logo-header" src="/assets/imgs/logo.png" alt="">
+            <h1>Boxe Healthy</h1>
+            
+            <div class="navbar">
+                <ul>
+                    <li><a class="menu" href="home.html">Início</a></li>
+                    <li><a class="menu" href="#">Saiba mais</a></li>
+                    <li id="separacao_navbar">|</li>
+                    <li><a class="login" href="login.html">Login</a></li>
+                    <li><a class="login" href="cadastro.html" style="color: #cdbafc">Cadastrar </a></li>
+                    <li><a class="menu" href="#" style="display: none;">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- ****** Fim Header ****** -->
+
+    <main>
+        <div class="container-body">
+            <div class="card-erro">aa</div>
+            <!-- ****** Login ****** -->
+            <div class="box-login">
+                <h2>Tela de Login</h2>
+                <div class="formulario">
+                    <div class="campo">
+                        <p>Email</p>
+                        <input placeholder="*****@provedor.com" class="input" type="text" id="email_input">
+                    </div>
+
+                    <div class="campo">
+                        <p>Senha</p>
+                        <input placeholder="*******" type="password"   class="input" id="senha_input">
+                    </div>
+                    
+                    <button class="botao" onclick="entrar()">Entrar</button>
+                </div>
+            </div>
+            <!-- ****** Fim Login ****** -->
+            
+        </div>
+        
+    </main>
+
+</body>
+</html>

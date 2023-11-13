@@ -102,7 +102,9 @@ main{
     flex-direction: column;
 }
 
-
+p{
+    letter-spacing: 2px;
+}
 
 
 

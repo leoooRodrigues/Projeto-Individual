@@ -16,6 +16,7 @@
   height: var(--tamanho-login);
   background-image: url('../assets/imgs/background-home.jpg');
   background-size: cover;
+  height: 100vh;
 }
 
 .login .container {

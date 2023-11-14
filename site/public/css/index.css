@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
+
+body{
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --tamanho-header: 80px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+/* pg1 */
+.banner {
+  height: var(--tamanho-banner);
+  background-image: url('../assets/imgs/background-home.jpg');
+  background-size: cover;
+}
+
+.banner .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.banner .container p {
+  font-size: 40px;
+  color: white;
+  width: 280px;
+  font-family: 'Bitter', sans-serif;
+}
+
+.banner .container span {
+  color: #bc99fd;
+}
+
+/* pg1 */
+
+/* pg2 */
+
+/* .social {
+background-color: #e5e5e5;
+display: flex;
+}
+
+.social .container {
+justify-content: center;
+}
+
+.box img {
+width: 170px;
+}
+
+.social .container .boxes {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.box {
+width: 280px;
+height: 450px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.box p {
+text-align: center;
+} */
+
+/* pg2 */

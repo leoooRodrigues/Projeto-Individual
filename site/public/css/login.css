@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
+
+:root {
+  --tamanho-header: 80px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+.login {
+  height: var(--tamanho-login);
+  background-image: url('../assets/imgs/background-home.jpg');
+  background-size: cover;
+}
+
+.login .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 40%;
+  background-color: #1c1a1bfc;;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: white;
+  row-gap: 20px;
+}
+
+.card-login {
+  height: 80%;
+  box-shadow: 0px 0 15px 1px #535353;
+  background: #1c1a1bfc;
+  color: white;
+  text-align: center;
+}
+
+.card-login {
+  height: 60%;
+}
+
+.card-login h2 {
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Bitter', sans-serif;
+}
+
+.formulario {
+  display: flex;
+  height: 90%;
+  width: 80%;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.formulario span {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.campo input {
+  text-decoration: none;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.4px white solid;
+  height: 30px;
+  text-align: center;
+  background-color: #1c1a1b;
+  transition: 0.5s ease-in-out;
+  outline: 0;
+  color: white;
+}
+
+.formulario input:focus{
+  border-bottom: 1px #9772f7 solid;
+
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+.botao {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  border: 0;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  background-color: white;
+  width: 120px;
+  height: 30px;
+  align-self: center;
+  transition: 0.3s;
+}
+
+.botao:hover{
+  background-color: #080411;
+  color: white;
+  transition: 0.3s;
+  width: 35%;
+  height: 6%;
+  cursor: pointer;
+}
+
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: #e6005a 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+

@@ -2,8 +2,6 @@
 
 body{
   font-family: 'Inter', sans-serif;
-  height: 100vh;
-
 }
 
 :root {
@@ -19,6 +17,7 @@ body{
   height: var(--tamanho-banner);
   background-image: url('../assets/imgs/background-home.jpg');
   background-size: cover;
+  height: 100vh;
 }
 
 .banner .container {
@@ -38,6 +37,37 @@ body{
   color: #bc99fd;
 }
 
+
+.banner2{
+  width: 100%;
+  height: 70vh;  
+  display: flex;
+}
+
+.banner2 .container{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #bc99fd;
+}
+
+.boxes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+.box{
+  border: 1px blue solid;
+  font-weight: bold;
+  height: 20vh;
+  text-align: center;
+}
 /* pg1 */
 
 /* pg2 */

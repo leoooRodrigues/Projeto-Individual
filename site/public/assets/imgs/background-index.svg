@@ -2,15 +2,15 @@
 <g clip-path="url(#clip0_1_2)">
 <rect width="1440" height="1024" fill="white"/>
 <rect width="1440" height="1024" fill="url(#pattern0)"/>
-<rect y="589" width="1440" height="188" fill="url(#paint0_linear_1_2)"/>
+<rect y="589" width="1440" height="435" fill="url(#paint0_linear_1_2)"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_1_2" transform="matrix(0.000666667 0 0 0.0009375 0 -0.203125)"/>
 </pattern>
-<linearGradient id="paint0_linear_1_2" x1="720" y1="589" x2="720" y2="777" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1_2" x1="720" y1="589" x2="720" y2="1024" gradientUnits="userSpaceOnUse">
 <stop stop-opacity="0"/>
-<stop offset="0.630208"/>
+<stop offset="0.322917"/>
 </linearGradient>
 <clipPath id="clip0_1_2">
 <rect width="1440" height="1024" fill="white"/>

@@ -14,7 +14,7 @@
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/background-home.jpg');
+  background-image: url('../assets/imgs/background-cadastro.svg');
   background-size: cover;
   height: 100vh;
 }

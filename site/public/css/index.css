@@ -74,6 +74,7 @@ body{
   font-family: 'Inter', sans-serif;
   color: azure;
   align-items: center;
+  padding: 0 5vw;
 }
 
 .box h2{
@@ -91,8 +92,14 @@ body{
 }
 
 .social .container {
-justify-content: center;
-height: 100vh;
+  justify-content: center;
+  height: 100vh;
+}
+
+.social .container .saiba-mais{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .social .container .box img {
@@ -101,7 +108,7 @@ width: 100px;
 
 .social .container .boxes {
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 width: 100%;
 }
 
@@ -112,6 +119,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+gap: 10px;
 }
 
 .social .container .box h4{
@@ -123,4 +131,22 @@ align-items: center;
 text-align: center;
 color: black;
 }
+
+.saiba-mais{
+  width: 100%;
+}
+
+.saiba-mais .item{
+  display: flex;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+}
+
+.saiba-mais .item h2{
+  color: #db9a45;
+}
+
+
 

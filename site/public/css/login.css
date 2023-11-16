@@ -152,4 +152,13 @@
   font-size: 20px;
 }
 
+html ::-webkit-scrollbar {
+  width: 10px;
+  background: #080411;
+}
+html ::-webkit-scrollbar-thumb {  
+  color:#080411;
+  background: azure;
+}
+
 

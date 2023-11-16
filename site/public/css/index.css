@@ -86,7 +86,7 @@ body{
 
 
 .social {
-  background-image: linear-gradient(azure 70% , black);
+  background-image: linear-gradient(azure 90% , black);
   display: flex;
   flex-direction: row;
 }
@@ -125,6 +125,7 @@ gap: 10px;
 .social .container .box h4{
   color: #db9a45;
   font-weight: 800;
+  font-family: 'Bitter',sans-serif;
 }
 
 .social .container .box p {
@@ -134,6 +135,7 @@ color: black;
 
 .saiba-mais{
   width: 100%;
+  margin-bottom: 5vh;
 }
 
 .saiba-mais .item{
@@ -145,6 +147,7 @@ color: black;
 }
 
 .saiba-mais .item h2{
+  font-family: 'Bitter',sans-serif;
   color: #db9a45;
 }
 

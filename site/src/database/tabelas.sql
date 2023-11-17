@@ -32,6 +32,7 @@ fkProfessor int,
 foreign key (fkProfessor) references professor(id)
 );
 
+
 CREATE TABLE analytics (
 id int,
 diasPraticados datetime,

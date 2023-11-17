@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="listar()">
+<body>
   <!--header inicio-->
   <div class="header">
     <div class="container">
@@ -74,10 +74,10 @@
             <span>Confirmar Senha:</span>
             <input id="confirmacao_senha_input" type="password" placeholder="******" />
           </div>
-          <div class="campo">
+          <!-- <div class="campo">
             <span>Data de nascimento:</span>
-            <input type="date">
-          </div>
+            <input type="date" id="data_input">
+          </div> -->
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
         </div>
         <div id="div_aguardar" class="loading-div">
@@ -111,14 +111,13 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var empresaVar = listaEmpresas.value
-    var cpfVar = cpf_input.value
+    var cpfVar = cpf_input.value;
+    // var dataVar = data_input.value;
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      empresaVar == "" ||
       confirmacaoSenhaVar != senhaVar
     ) {
       cardErro.style.display = "block";
@@ -143,8 +142,8 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        empresaServer: empresaVar,
         cpfServer: cpfVar
+        // dataServer: dataVar
       }),
     })
       .then(function (resposta) {
@@ -174,21 +173,21 @@
     return false;
   }
 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
 
   function sumirMensagem() {
     cardErro.style.display = "none";

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
 
 body {
   margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
+  border-bottom: 3px solid #21173a;
 }
 
 .header .container {
@@ -254,9 +254,12 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
-  /* border: 3px solid pink; */
+  border-right: 3px solid #db9a45;
+  background-color: #21173a;
+}
+
+.header-left h1{
+  font-family: 'Bitter', sans-serif;
 }
 
 .dash-right {
@@ -270,7 +273,7 @@ input {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: azure;
 }
 
 .hello {

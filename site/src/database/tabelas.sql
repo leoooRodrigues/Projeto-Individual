@@ -25,7 +25,6 @@ nome varchar(45),
 email varchar(45),
 cpf char(14),
 senha varchar(20),
-dtNasc date,
 fkTurma int,
 foreign key (fkTurma) references turma(id),
 fkProfessor int,
@@ -42,4 +41,7 @@ foreign key (fkAluno) references aluno(id),
 primary key(id,fkAluno)
 );
 
+INSERT INTO aluno VALUES 
+	(1,'Leonardo','leonardo@gmail.com','12312312312311','leo123',null,null);
+    
 

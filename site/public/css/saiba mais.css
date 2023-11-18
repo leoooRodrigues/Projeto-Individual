@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
+
+:root {
+  --tamanho-header: 80px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+  
+}

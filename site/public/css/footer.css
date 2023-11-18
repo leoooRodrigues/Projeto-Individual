@@ -14,24 +14,18 @@
 }
 
 .footer {
-  height: var(--tamanho-footer);
-  background-color: #db9a45;
   font-family: 'Bitter',sans-serif;
-  color: #fff;
+  height: var(--tamanho-footer);
+  background-color: #080411;
 }
 
 .footer h4 {
-    margin: 0;
+  color: #bc99fd;
+  margin: 0;
 }
 
 .footer .container {
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
   height: 100%;
-}
-
-.footer .container .version {
-  font-size: 12px;
-  font-weight: 800;
 }

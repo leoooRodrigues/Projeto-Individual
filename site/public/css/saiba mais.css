@@ -9,9 +9,195 @@
 }
 
 *{
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
-.container{
+body{
+  color: azure;
+  background: #141414;
+}
+
+a{
+  text-decoration: none;
+  color: #db9a45;
+}
+
+h2{
+  color: #bc99fd;
+  font-family: 'Bitter',sans-serif;
+  padding-bottom: 10px;
+}
+
+#subir{
+  position: fixed;
+  border-radius: 50%;
+  width: 3%;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  background: azure;
+  font-weight: 800;
+  font-size: larger;
+  margin-bottom: 12vh;
+}
+
+
+/**** navbar-leitura ****/
+
+.navbar-leitura{
+  height: 20vh;
+  padding-bottom: 5vh;
+}
+
+.cor{
+  height: 15vh;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   
 }
+
+h5{
+  padding-bottom: 4px;
+  color: #db9a45;
+  font-family: 'Bitter', sans-serif;
+}
+
+audio{
+  height: 25%;
+  padding-top: 20px;
+}
+
+.botoes{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+button{
+  width: 20%;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-leitura .navbar{
+  height: 15vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+/**** navbar-leitura ****/
+
+/**** ---------------- ****/
+
+/**** pg1 ****/
+
+.pg1{
+  height: 80vh;
+}
+
+
+.pg1 .container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**** pg1 ****/
+
+/**** ---------------- ****/
+
+/**** pg2 ****/
+
+.pg2{
+  height: 80vh;
+}
+
+.pg2 .container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**** pg2 ****/
+
+/**** ---------------- ****/
+
+/**** pg3 ****/
+
+.pg3{
+  height: 80vh;
+}
+
+
+.pg3 .container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**** pg3 ****/
+
+/**** ---------------- ****/
+
+/**** pg4 ****/
+
+.pg4{
+  height: 80vh;
+}
+
+
+.pg4 .container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**** pg4 ****/
+
+/**** ---------------- ****/
+
+/**** pg5 ****/
+
+.pg5{
+  height: 80vh;
+}
+
+
+.pg5 .container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**** pg5 ****/
+
+/**** ---------------- ****/
+
+/**** scrollbar ****/
+
+  html ::-webkit-scrollbar {
+  width: 10px;
+  background: #080411;
+  }
+
+  html ::-webkit-scrollbar-thumb {  
+  color:#080411;
+  background: azure;
+  border-radius: 3px;
+  }
+
+/**** scrollbar ****/

@@ -103,7 +103,6 @@ body{
   width: 34vw; 
   box-shadow: 0 0 4px 0.5px rgb(255, 255, 255);
   border-radius: 2px 15%;
-  margin-bottom: 2vh;
 }
 /**** Projeto ****/
 
@@ -283,6 +282,7 @@ html ::-webkit-scrollbar {
 html ::-webkit-scrollbar-thumb {  
   color:#080411;
   background: azure;
+  border-radius: 3px;
 }
 
 /**** scrollbar ****/

@@ -13,6 +13,8 @@ body{
 }
 
 
+/**** Principal ****/
+
 .banner {
   height: var(--tamanho-banner);
   background-image: url('../assets/imgs/background-index.svg');
@@ -21,7 +23,7 @@ body{
 }
 
 .banner .container {
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   height: 100%;
 }
@@ -37,15 +39,88 @@ body{
   color: #bc99fd;
 }
 
+/**** Principal ****/
 
-.banner2{
+
+/* ---------------------------- */
+
+
+/**** Projeto ****/
+.projeto{
+  height: 100vh;
+}
+
+.projeto h2{
+  font-family: 'Bitter', sans-serif;
+  color: #db9a45;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.projeto .container{
+  color: azure;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row-reverse wrap;
+  width: 100%;
+}
+
+.texto{
+  width: 60%;
+}
+
+#logo{
+  font-family: 'Bitter',sans-serif;
+  color: azure;
+}
+
+.texto2{
+  width: 100%;
+  height: 40vh;
+  margin-left: 3vw;
+  font-size: 22px;
+  font-family: 'Inter', sans-serif;
+}
+
+.texto2 .cadastrar{
+  text-align: center;
+  font-size: 30px;
+}
+
+.projeto .texto p{
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+}
+
+.projeto span{
+  font-weight: 800;
+  font-size: 25px;
+  color: #db9a45;
+}
+
+.projeto img{
+  height: 47vh; 
+  width: 34vw; 
+  box-shadow: 0 0 4px 0.5px rgb(255, 255, 255);
+  border-radius: 2px 15%;
+  margin-bottom: 2vh;
+}
+/**** Projeto ****/
+
+
+/* ---------------------------- */
+
+
+/**** Benefícios ****/
+
+.beneficios{
   width: 100%;
   height: 70vh;  
   display: flex;
   background-image: linear-gradient(black 60%,azure);
 }
 
-.banner2 .container{
+.beneficios .container{
   justify-content: center;
   align-items: center;
   height: 95%;
@@ -84,55 +159,74 @@ body{
   font-weight: 800;
 }
 
+/**** Benefícios ****/
 
-.social {
+
+/* ---------------------------- */
+
+
+/**** Celebridades ****/
+
+.celebridades {
   background-image: linear-gradient(azure 90% , black);
   display: flex;
   flex-direction: row;
 }
 
-.social .container {
+.celebridades .container {
   justify-content: center;
   height: 100vh;
 }
 
-.social .container .saiba-mais{
+.celebridades .saiba-mais{
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
 
-.social .container .box img {
-width: 100px;
+.celebridades img {
+  width: 100px;
 }
 
-.social .container .boxes {
-display: flex;
-justify-content: space-around;
-width: 100%;
+.celebridades .boxes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 2vw;
 }
 
-.social .container .box {
-width: 280px;
-height: 450px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
+.celebridades .box {
+  width: 280px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 4px 1px rgb(100, 100, 100);
+  border-radius: 10px;
 }
 
-.social .container .box h4{
+
+.celebridades h4{
   color: #db9a45;
   font-weight: 800;
   font-size: 5vh;
   font-family: 'Bitter',sans-serif;
 }
 
-.social .container .box p {
-text-align: center;
-color: black;
+.celebridades p {
+  text-align: center;
+  color: black;
 }
+
+/**** Celebridades ****/
+
+
+/* ---------------------------- */
+
+
+/**** saiba mais ****/
 
 .saiba-mais{
   width: 100%;
@@ -147,20 +241,29 @@ color: black;
   gap: 1em;
 }
 
-.saiba-mais .item h2{
+.saiba-mais h2{
   font-family: 'Bitter',sans-serif;
   color: #db9a45;
 }
+
+/**** saiba mais ****/
+
+
+/* ---------------------------- */
+
+
+/**** scrollbar ****/
 
 html ::-webkit-scrollbar {
   width: 10px;
   background: #080411;
 }
+
 html ::-webkit-scrollbar-thumb {  
   color:#080411;
   background: azure;
 }
 
-
+/**** scrollbar ****/
 
 

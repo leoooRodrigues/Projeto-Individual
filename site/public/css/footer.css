@@ -15,7 +15,6 @@
 
 .footer {
   height: var(--tamanho-footer);
-  width: 100%;
   background-color: #db9a45;
   font-family: 'Bitter',sans-serif;
   color: #fff;

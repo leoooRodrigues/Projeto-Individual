@@ -32,8 +32,8 @@ h2{
 #subir{
   position: fixed;
   border-radius: 50%;
-  width: 3%;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   bottom: 0;
   left: 0;
   background: azure;
@@ -63,11 +63,12 @@ h2{
 h5{
   padding-bottom: 4px;
   color: #db9a45;
+  font-size: 20px;
   font-family: 'Bitter', sans-serif;
 }
 
 audio{
-  height: 25%;
+  height: 30%;
   padding-top: 20px;
 }
 
@@ -81,7 +82,7 @@ audio{
 
 button{
   width: 20%;
-  height: 40px;
+  height: 50px;
   border-radius: 50%;
   text-align: center;
 }
@@ -102,7 +103,7 @@ button{
 /**** pg1 ****/
 
 .pg1{
-  height: 80vh;
+  height: 70vh;
 }
 
 
@@ -120,7 +121,7 @@ button{
 /**** pg2 ****/
 
 .pg2{
-  height: 80vh;
+  height: 65vh;
 }
 
 .pg2 .container{
@@ -137,7 +138,7 @@ button{
 /**** pg3 ****/
 
 .pg3{
-  height: 80vh;
+  height: 65vh;
 }
 
 
@@ -155,7 +156,7 @@ button{
 /**** pg4 ****/
 
 .pg4{
-  height: 80vh;
+  height: 65vh;
 }
 
 

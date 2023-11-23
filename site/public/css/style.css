@@ -299,6 +299,7 @@ input {
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+  cursor: default;
 }
 
 .btn-nav-white {
@@ -308,6 +309,11 @@ input {
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+}
+
+.btn-nav-white:hover{
+  width: 45%;
+  transition: 100ms;
 }
 
 .btn-nav-white h3 {
@@ -333,6 +339,12 @@ input {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+
+.btn-logout:hover{
+  width: 25%;
+  border: 3px solid black;
+  transition: 100ms;
 }
 
 /* pagina extra - simulador */

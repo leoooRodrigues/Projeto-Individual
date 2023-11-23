@@ -166,7 +166,7 @@ span{
   font-weight: bold;
   height: 20vh;
   text-align: center;
-  font-size:small;
+  font-size: large;
   font-family: 'Inter', sans-serif;
   color: azure;
   align-items: center;
@@ -239,7 +239,7 @@ span{
 
 .celebridades .box {
   width: 280px;
-  height: 450px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;

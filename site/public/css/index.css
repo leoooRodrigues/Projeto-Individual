@@ -39,7 +39,7 @@ span{
   height: var(--tamanho-banner);
   background-image: url('../assets/imgs/background-index.svg');
   background-size: cover;
-  height: 100vh;
+  height: 115vh;
 }
 
 .banner .container {
@@ -166,7 +166,7 @@ span{
   font-weight: bold;
   height: 20vh;
   text-align: center;
-  font-size:small;
+  font-size: large;
   font-family: 'Inter', sans-serif;
   color: azure;
   align-items: center;
@@ -197,7 +197,6 @@ span{
   height: 63%;
   font-weight: 800;
   flex-wrap: nowrap;
-  width: 80%;
 }
 
 /**** Benefícios ****/
@@ -239,7 +238,7 @@ span{
 
 .celebridades .box {
   width: 280px;
-  height: 450px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,6 +246,7 @@ span{
   gap: 10px;
   box-shadow: 0 0 4px 1px rgb(100, 100, 100);
   border-radius: 10px;
+  color: #e0e0e0;
 }
 
 

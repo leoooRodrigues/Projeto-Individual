@@ -255,7 +255,7 @@ input {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #db9a45;
-  background-color: #21173a;
+  background-color: #212124;
 }
 
 .header-left h1{
@@ -295,23 +295,29 @@ input {
 .btn-nav {
   width: 40%;
   color: white;
-  background-color: #e6005a;
+  background-color: #9772f7;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+  cursor: default;
 }
 
 .btn-nav-white {
   width: 40%;
   background-color: white;
-  border: 3px solid #e6005a;
+  border: 3px solid #db9a45;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
+.btn-nav-white:hover{
+  width: 45%;
+  transition: 100ms;
+}
+
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #db9a45;
   padding: 0;
   margin: 0;
 }
@@ -326,13 +332,19 @@ input {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
+  background-color: #9772f7;
   color: white;
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+
+.btn-logout:hover{
+  width: 25%;
+  border: 3px solid black;
+  transition: 100ms;
 }
 
 /* pagina extra - simulador */

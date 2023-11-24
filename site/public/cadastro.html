@@ -62,10 +62,10 @@
             <span>E-mail:</span>
             <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
           </div>
-          <div class="campo">
+          <!-- <div class="campo">
             <span>CPF:</span>
             <input id="cpf_input" type="text" placeholder="12332145678921" />
-          </div>
+          </div> -->
           <div class="campo">
             <span>Senha:</span>
             <input id="senha_input" type="password" placeholder="******" />
@@ -111,24 +111,88 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var cpfVar = cpf_input.value;
+    var validacao = 0;
+    // var cpfVar = cpf_input.value;
     // var dataVar = data_input.value;
     if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      confirmacaoSenhaVar != senhaVar
-    ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      nomeVar.indexOf("#") >= 0 ||
+      nomeVar.indexOf("@") >= 0 ||
+      nomeVar.indexOf("!") >= 0 ||
+      nomeVar.indexOf("%") >= 0 ||
+      nomeVar.indexOf("*") >= 0 ||
+      nomeVar.indexOf("$") >= 0 ||
+      nomeVar.indexOf("&") >= 0
 
-      finalizarAguardar();
+    ) {
+      div_mensagem.style.display = "flex"
+      div_mensagem.innerHTML += `-Não pode haver caracter especial no nome da empresa<br>`;
+
+      validacao = 1
+    }
+
+
+    //SENHA
+
+    if (senhaVar.length < 8) {
+      div_mensagem.innerHTML += `-A senha deve possuir no mínimo 8 caracteres <br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+
+    if (senhaVar.indexOf(" ") >= 0) {
+      div_mensagem.innerHTML += `-Não pode conter espaços na senha <br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+
+    if (
+      !(senhaVar.indexOf("#") >= 1 ||
+        senhaVar.indexOf("@") >= 1 ||
+        senhaVar.indexOf("!") >= 1 ||
+        senhaVar.indexOf("%") >= 1 ||
+        senhaVar.indexOf("*") >= 1 ||
+        senhaVar.indexOf("$") >= 1 ||
+        senhaVar.indexOf("_") >= 1 ||
+        senhaVar.indexOf("-") >= 1 ||
+        senhaVar.indexOf("&") >= 1)
+    ) {
+      div_mensagem.innerHTML += `-A senha deve possuir no mínimo 1 caracter especial <br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+
+    //EMAIL
+    if (!(emailVar.indexOf("@") >= 1)) {
+      div_mensagem.innerHTML += `-Deve conter @ no email<br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+    if (!(emailVar.indexOf(".com") >= 1)) {
+      div_mensagem.innerHTML += `-Deve conter .com no email <br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+    if (emailVar.indexOf(" ") >= 0) {
+      div_mensagem.innerHTML += `-Não pode conter espaços na email <br>`;
+      div_mensagem.style.display = "flex";
+      validacao = 1
+    }
+
+    if (senhaVar != confirmacaoSenhaVar) {
+      mensagem += `-Senhas incompatíveis`;
+      validacao = 1
+    }
+
+    div_mensagem.innerHTML += mensagem;
+
+    if (validacao == 1) {
       return false;
     } else {
+      div_mensagem.style.display = 'none'
+      // div_logado.style.display = 'flex'
+
+      
       setInterval(sumirMensagem, 5000);
-    }
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -192,4 +256,5 @@
   function sumirMensagem() {
     cardErro.style.display = "none";
   }
+}
 </script>

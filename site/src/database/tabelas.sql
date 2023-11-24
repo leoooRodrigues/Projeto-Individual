@@ -23,7 +23,6 @@ CREATE TABLE aluno (
 id int primary key auto_increment,
 nome varchar(45),
 email varchar(45) unique,
-cpf char(14) unique,
 senha varchar(20),
 fkTurma int,
 foreign key (fkTurma) references turma(id),
@@ -41,8 +40,20 @@ foreign key (fkAluno) references aluno(id),
 primary key(id,fkAluno)
 );
 
-INSERT INTO aluno VALUES 
-	(1,'Leonardo','leonardo@gmail.com','12312312312311','leo123',null,null);
+CREATE TABLE comentario (
+id int auto_increment,
+comentario varchar(500),
+fkAluno int,
+foreign key (fkAluno) references aluno(id),
+primary key(id,fkAluno)
+);
+
+
+INSERT INTO professor VALUES 
+	(null,'Leonardo','leonardo@gmail.com','leo123',null,null);
+    
+INSERT INTO aluno VALUES
+	(null,'Felipe','felipe@gmail.com','leo123',null,1);
     
 select * from aluno;
     

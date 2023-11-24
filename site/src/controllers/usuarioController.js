@@ -5,7 +5,7 @@ function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
-    if (email == undefined && email.indexOf["@"] == 0 && email.indexOf["."] == 0) {
+    if (email == undefined && email) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined && senha.length < 7) {
         res.status(400).send("Sua senha está indefinida!");

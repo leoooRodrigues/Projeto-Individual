@@ -22,8 +22,8 @@ primary key (id,fkProfessor)
 CREATE TABLE aluno (
 id int primary key auto_increment,
 nome varchar(45),
-email varchar(45),
-cpf char(14),
+email varchar(45) unique,
+cpf char(14) unique,
 senha varchar(20),
 fkTurma int,
 foreign key (fkTurma) references turma(id),
@@ -43,5 +43,7 @@ primary key(id,fkAluno)
 
 INSERT INTO aluno VALUES 
 	(1,'Leonardo','leonardo@gmail.com','12312312312311','leo123',null,null);
+    
+select * from aluno;
     
 

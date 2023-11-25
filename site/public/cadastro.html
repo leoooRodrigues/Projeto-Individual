@@ -45,7 +45,7 @@
   <!--header fim-->
 
   <div class="login">
-    <div class="alerta_erro">
+    <div class="erro">
       <div class="card_erro" id="cardErro">
         <span id="mensagem_erro"></span>
       </div>
@@ -108,6 +108,7 @@
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     var validacao = 0;
+    var exibir = ''
     // var cpfVar = cpf_input.value;
     var dataVar = data_input.value;
     if (
@@ -120,8 +121,8 @@
       nomeVar.indexOf("&") >= 0
 
     ) {
-      div_mensagem.style.display = "flex"
-      div_mensagem.innerHTML += `-Não pode haver caracter especial no nome da empresa<br>`;
+      cardErro.style.display = "flex"
+      exibir += `- Não pode haver caracter especial no nome da empresa<br><br>`;
 
       validacao = 1
     }
@@ -130,14 +131,14 @@
     //SENHA
 
     if (senhaVar.length < 8) {
-      div_mensagem.innerHTML += `-A senha deve possuir no mínimo 8 caracteres <br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `- A senha deve possuir no mínimo 8 caracteres <br><br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
 
     if (senhaVar.indexOf(" ") >= 0) {
-      div_mensagem.innerHTML += `-Não pode conter espaços na senha <br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `- Não pode conter espaços na senha <br><br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
 
@@ -152,39 +153,40 @@
         senhaVar.indexOf("-") >= 1 ||
         senhaVar.indexOf("&") >= 1)
     ) {
-      div_mensagem.innerHTML += `-A senha deve possuir no mínimo 1 caracter especial <br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `- A senha deve possuir no mínimo 1 caracter especial <br><br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
 
     //EMAIL
     if (!(emailVar.indexOf("@") >= 1)) {
-      div_mensagem.innerHTML += `-Deve conter @ no email<br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `- Deve conter @ no email<br><br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
     if (!(emailVar.indexOf(".com") >= 1)) {
-      div_mensagem.innerHTML += `-Deve conter .com no email <br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `- Deve conter .com no email <br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
     if (emailVar.indexOf(" ") >= 0) {
-      div_mensagem.innerHTML += `-Não pode conter espaços na email <br>`;
-      div_mensagem.style.display = "flex";
+      exibir += `<>- Não pode conter espaços na email <br>`;
+      cardErro.style.display = "flex";
       validacao = 1
     }
 
     if (senhaVar != confirmacaoSenhaVar) {
-      mensagem += `-Senhas incompatíveis`;
+      exibir += `- Senhas incompatíveis`;
       validacao = 1
     }
+    
+    // exibir += mensagem;
 
-    div_mensagem.innerHTML += mensagem;
-
+    cardErro.innerHTML = exibir;
     if (validacao == 1) {
       return false;
     } else {
-      div_mensagem.style.display = 'none'
+      cardErro.style.display = 'none'
       // div_logado.style.display = 'flex'
 
       

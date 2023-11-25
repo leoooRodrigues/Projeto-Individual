@@ -8,8 +8,10 @@
   --tamanho-footer: 65px;
 }
 
-*{
-    font-family: 'Exo 2', sans-serif;
+
+h2{
+  color: #db9a45;
+  font-family: 'Bitter', sans-serif;
 }
 
 .login {
@@ -61,6 +63,7 @@
   width: 80%;
   justify-content: space-around;
   flex-direction: column;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .formulario span {

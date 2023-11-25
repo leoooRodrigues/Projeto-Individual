@@ -124,6 +124,7 @@ span{
   box-shadow: 0 0 4px 0.5px rgb(255, 255, 255);
   border-radius: 2px 15%;
 }
+
 /**** Projeto ****/
 
 
@@ -197,6 +198,10 @@ span{
   height: 63%;
   font-weight: 800;
   flex-wrap: nowrap;
+}
+
+.cadastrar a{
+  color: #551a8b;
 }
 
 /**** Benefícios ****/
@@ -286,6 +291,10 @@ span{
 .saiba-mais h2{
   font-family: 'Bitter',sans-serif;
   color: #db9a45;
+}
+
+.saiba-mais a{
+  color: #551a8b;
 }
 
 /**** saiba mais ****/

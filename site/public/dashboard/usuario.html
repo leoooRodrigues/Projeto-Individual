@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="../assets/icon/logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxeHealthy | Página inicial</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/dashboards.css"> -->
+    <link rel="stylesheet" href="../css/indexUsuario.css">
+    <!-- <script src="../js/sessao.js"></script> -->
+
+    <style>
+      .btn-nav-white,
+      .btn-nav{
+        font-family: 'Bitter', sans-serif;
+      }
+    </style>
+</head>
+<body onload="validarSessao()">
+  <div class="janela">
+
+    <div class="header-left">
+
+        <a href="./usuario.html"><h1 style="color: #9772f7;">BoxeHealthy</h1></a>
+
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./cards.html">
+                <h3>Agenda</h3>
+            </a>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./dashboard.html">
+                <h3>Desempenho</h3>
+            </a>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./mural.html">
+                <h3>Sugestões</h3>
+            </a>
+        </div>
+
+        <div class="btn-logout" onclick="limparSessao()">
+            <h3>Sair</h3>
+        </div>
+
+    </div>
+
+    <div class="dash">
+        <div class="container">
+            <div class="texto">
+                <p class="welcome">Seja bem-vindo(a), é um prazer ter você aqui conosco!</p>
+                <p>Aqui você poderá acessar desde datas de treino da sua turma, seu desempenho nas aulas, que é avaliado por um professor e até nos dar sugestões de melhoria.</p>
+                
+            </div>
+            <div class="quiz">
+                <p>Abaixo temos o nosso QUIZ no qual você poderá testar seus conhecimentos gerais sobre o boxe.</p>
+            </div>
+            <div class="texto">
+                <span>Frase motivacional: "Ninguém vai bater mais forte do que a vida. Não importa como você bate e sim o quanto aguenta apanhar e continuar lutando"</span><br>
+               <span>- Rocky Balboa</span>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+</div>
+  
+</body>
+</html>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
 
 body{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   background: black;
 }
 
@@ -99,7 +99,7 @@ span{
   height: 10vh;
   margin-left: 3vw;
   font-size: 22px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .texto2 .cadastrar{
@@ -108,7 +108,7 @@ span{
 }
 
 .projeto .texto p{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 22px;
 }
 
@@ -167,7 +167,7 @@ span{
   height: 20vh;
   text-align: center;
   font-size: large;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   color: azure;
   align-items: center;
   padding: 0 5vw;

@@ -2,13 +2,14 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoxeHealthy | login</title>
+    <title>BoxeHealthy | Desempenho</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboards.css">
     <!-- <script src="../js/sessao.js"></script> -->
     <script src="./../js/alerta.js"></script>
 
@@ -26,11 +27,11 @@
 
 <!-- <body onload=" atualizarFeed()"> -->
 
-<body>
+<body onload="validarSessao()">
 
     <div class="janela">
         <div class="header-left">
-            <h1>BoxeHealthy</h1>
+            <a href="./usuario.html"><h1>BoxeHealthy</h1></a>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -50,7 +51,7 @@
 
             <div class="btn-nav-white">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Sugestões</h3>
                 </a>
             </div>
 
@@ -312,5 +313,10 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
 
+    }
+
+    function limparSessao(){
+        sessionStorage.clear();
+        window.location = "../login.html";
     }
 </script>

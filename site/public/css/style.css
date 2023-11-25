@@ -314,7 +314,9 @@ input {
 .btn-nav-white:hover{
   width: 45%;
   transition: 100ms;
+  height: fit-content;
 }
+
 
 .btn-nav-white h3 {
   color: #db9a45;

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Inter:wght@300&display=swap');
+
+.btn-nav-white{
+  font-family: 'Exo 2', sans-serif;
+}
+
+.dash {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 20%;
+  background-color: #161618;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.texto{
+  font-family: 'Exo 2', sans-serif;
+  height: 20vh;
+  text-align: center;
+  color: azure;
+  width: 60%;
+}
+
+.welcome{
+  color: #db9a45;
+  font-family: 'Bitter', sans-serif;
+  font-size:xx-large;
+}
+
+.quiz{
+  height: 70vh;
+  color: azure;
+  font-family: 'Exo 2', sans-serif;
+}

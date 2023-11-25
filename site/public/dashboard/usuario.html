@@ -62,13 +62,27 @@
             <div class="texto">
                 <p class="welcome">Seja bem-vindo(a), é um prazer ter você aqui conosco!</p>
                 <p>Aqui você poderá acessar desde datas de treino da sua turma, seu desempenho nas aulas, que é avaliado por um professor e até nos dar sugestões de melhoria.</p>
+                <p>Abaixo temos o nosso "Quiz" no qual você poderá testar seus conhecimentos gerais sobre o boxe.</p>
+            </div>
+                <button id="comecar" class="button1" onclick="start()">Começar Quiz!</button>
+            <div id="quiz" class="quiz hide">
+                <p>Pergunta</p>
+                <div class="questionario esconder">
+                    <div class="btn-left">
+                        <button id="btn1" class="resposta button">A</button>
+                        <button id="btn2" class="resposta button">B</button>
+                    </div>
+                    <div class="btn-right">
+                        <button id="btn3" class="resposta button">C</button>
+                        <button id="btn4" class="resposta button">D</button>
+                    </div>
+                </div>
+                <button id="confirmar" class="confirmar">Confirmar</button>
                 
             </div>
-            <div class="quiz">
-                <p>Abaixo temos o nosso QUIZ no qual você poderá testar seus conhecimentos gerais sobre o boxe.</p>
-            </div>
-            <div class="texto">
-                <span>Frase motivacional: "Ninguém vai bater mais forte do que a vida. Não importa como você bate e sim o quanto aguenta apanhar e continuar lutando"</span><br>
+            <div class="frase">
+                <span id="frase">Frase motivacional</span><br>
+                <span>"Ninguém vai bater mais forte do que a vida. Não importa como você bate e sim o quanto aguenta apanhar e continuar lutando"</span><br>
                <span>- Rocky Balboa</span>
             </div>
         </div>
@@ -81,3 +95,40 @@
   
 </body>
 </html>
+
+<script>
+    function start(){
+        comecar.classList.add('hide')
+        quiz.classList.remove('hide')
+    }
+
+
+
+    const questoes_certas = ['Luva','Popó','Sim','Grécia Antiga','Muhammad Ali']
+    const questoes = [
+        {
+            questao: 'O que usado nas mãos para evitar grandes lesões no impacto do golpe ?',
+            opcao: ['Travesseiro','Creme','Luva','Panela']
+        },
+        {
+            questao: 'Qual é o nome artistico de Acelino Freitas ?',
+            opcao: ['Esquiva Falcão','Indiana Jone','McQueen','Popó']
+            
+        },
+        {
+            questao: 'O Boxe é um esporte olímpico ?',
+            opcao: [',De jeito nenhum','Parcialmente','Sim','Não sei']
+
+        },
+        {
+            questao: 'Quando que o Boxe se consolidou modalidade esportiva',
+            opcao: ['Grécia Antiga','Revolução Industrial','Era Medieval','Época dos dinossauros']
+            
+        },
+        {
+            questao: 'Quem é considerado um dos maiores pugilistas de todos os tempos?',
+            opcao: ['Manny Pacquiao','Muhammad Ali','Floyd Mayweather Jr.','Mike Tyson']
+    
+        }
+    ]
+</script>

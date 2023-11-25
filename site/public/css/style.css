@@ -200,7 +200,6 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -347,6 +346,10 @@ input {
   width: 25%;
   border: 3px solid black;
   transition: 100ms;
+}
+
+.enviar{
+  background-color: #db9a45;
 }
 
 /* pagina extra - simulador */

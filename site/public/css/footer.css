@@ -22,6 +22,7 @@
 .footer h4 {
   color: #bc99fd;
   margin: 0;
+  padding: 0;
 }
 
 .footer .container {
@@ -32,4 +33,18 @@
 
 h3{
   color: azure;
+}
+
+.contato{
+  color: azure;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.telefone,
+.email{
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

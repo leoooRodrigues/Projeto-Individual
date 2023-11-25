@@ -108,12 +108,13 @@
 
 .confirmar:hover{
   background-color: #db9a45;
+  color: azure;
 }
 
 #confirmar{
   width: 15%;
   align-self: center;
-  border: 5px black solid;
+  border: 2px #db9a45 solid;
   border-radius: 2px;
 }
 

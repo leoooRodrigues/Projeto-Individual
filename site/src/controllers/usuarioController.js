@@ -1,5 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
+// var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
@@ -53,8 +53,8 @@ function cadastrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else if (dtNasc == undefined){
-        res.status(400).send("Sua senha está undefined!");
-    } else  {
+        res.status(400).send("Sua data de nascimento está undefined!");
+    } else {
 
         // if (cpf == undefined) {
     //     res.status(400).send("Seu cpf está undefined!");

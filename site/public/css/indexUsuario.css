@@ -38,6 +38,23 @@
   font-size:xx-large;
 }
 
+.hello{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.hello h3{
+  color: #e3b062;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hello h3 span{
+  font-weight: 800;
+}
+
 .quiz{
   height: 60vh;
   color: azure;
@@ -45,6 +62,7 @@
   background-color: #3d3d3d;
   box-shadow: #db9a45 0 0 10px -1px;
   text-align: center;
+  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;

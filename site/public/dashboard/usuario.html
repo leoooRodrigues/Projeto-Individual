@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../css/indexUsuario.css">
     <!-- <script src="../js/sessao.js"></script> -->
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        
     <style>
       .btn-nav-white,
       .btn-nav{
@@ -66,18 +71,19 @@
             </div>
                 <button id="comecar" class="button1" onclick="start()">Começar Quiz!</button>
             <div id="quiz" class="quiz hide">
-                <p>Pergunta</p>
+                <p id="nmrQuestao"></p>
+                <p id="pergunta"></p>
                 <div class="questionario esconder">
                     <div class="btn-left">
-                        <button id="btn1" class="resposta button">A</button>
-                        <button id="btn2" class="resposta button">B</button>
+                        <button onclick="confirmarQuestao()" id="btn1" class="resposta button"></button>
+                        <button onclick="confirmarQuestao()" id="btn2" class="resposta button"></button>
                     </div>
                     <div class="btn-right">
-                        <button id="btn3" class="resposta button">C</button>
-                        <button id="btn4" class="resposta button">D</button>
+                        <button onclick="confirmarQuestao()" id="btn3" class="resposta button"></button>
+                        <button onclick="confirmarQuestao()" id="btn4" class="resposta button"></button>
                     </div>
                 </div>
-                <button id="confirmar" class="confirmar">Confirmar</button>
+                <!-- <button id="confirmar" class="confirmar" onclick="confirmarQuestao()">Confirmar</button> -->
                 
             </div>
             <div class="frase">
@@ -97,38 +103,100 @@
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var i = 0
+
     function start(){
         comecar.classList.add('hide')
         quiz.classList.remove('hide')
+        
+        var nmr = document.getElementById('nmrQuestao');
+        var texto = document.getElementById('pergunta');
+        var botao1 = document.getElementById('btn1');
+        var botao2 = document.getElementById('btn2');
+        var botao3 = document.getElementById('btn3');
+        var botao4 = document.getElementById('btn4');
+
+        for(;true;){
+            if(i == 10){
+            finalizar()
+            break
+            
+            } else {
+
+                nmr.textContent = 'Questão ' + (i+1) + ' de 10'
+                texto.textContent = questoes[i].questao
+                botao1.textContent = questoes[i].opcao[0]
+                botao2.textContent = questoes[i].opcao[1]
+                botao3.textContent = questoes[i].opcao[2]
+                botao4.textContent = questoes[i].opcao[3]
+                break
+            }
+        }
+        
+        
     }
 
+    function finalizar(){
+        quiz.classList.add('hide')
+        pontuacao.classList.remove('hide')
+    }
 
+    function limparSessao(){
+        sessionStorage.clear() ;
+        window.location = "../login.html";
+    }
 
-    const questoes_certas = ['Luva','Popó','Sim','Grécia Antiga','Muhammad Ali']
+    function confirmarQuestao(){
+        i++;
+        start()
+    }
+
+    var escolhas = []
+    const questoes_certas = [2,3,2,0,1,1,2,0,1,0]
+
     const questoes = [
         {
-            questao: 'O que usado nas mãos para evitar grandes lesões no impacto do golpe ?',
+            questao: 'O que usado nas mãos para evitar grandes lesões no impacto do golpe ',
             opcao: ['Travesseiro','Creme','Luva','Panela']
         },
         {
-            questao: 'Qual é o nome artistico de Acelino Freitas ?',
-            opcao: ['Esquiva Falcão','Indiana Jone','McQueen','Popó']
-            
+            questao: 'Qual é o nome artistico de Acelino Freitas ',
+            opcao: ['Esquiva Falcão','Indiana Jones','McQueen','Popó']
         },
         {
-            questao: 'O Boxe é um esporte olímpico ?',
-            opcao: [',De jeito nenhum','Parcialmente','Sim','Não sei']
-
+            questao: 'O Boxe é um esporte olímpico ',
+            opcao: ['De jeito nenhum','Parcialmente','Sim','Não sei']
         },
         {
             questao: 'Quando que o Boxe se consolidou modalidade esportiva',
             opcao: ['Grécia Antiga','Revolução Industrial','Era Medieval','Época dos dinossauros']
-            
         },
         {
-            questao: 'Quem é considerado um dos maiores pugilistas de todos os tempos?',
-            opcao: ['Manny Pacquiao','Muhammad Ali','Floyd Mayweather Jr.','Mike Tyson']
-    
+            questao: 'Quem é considerado um dos maiores puglistas de todos os tempos',
+            opcao: ['Juju Salimeni','Muhammad Ali','Jojo Toddynho','Mike Tyson']
+        },
+        {
+            questao: 'Em que parte do corpo um boxeador é mais propenso a receber um "gancho" durante uma luta',
+            opcao: ['Panturrilha','Estômago','Queixo','Nariz']
+        },
+        {
+            questao: 'Qual é o nome do canto onde os boxeadores descansam entre os rounds durante uma luta de boxe',
+            opcao: ['Intervalo','Recesso','Esquina','Descanso']
+        },
+        {
+            questao: 'Qual é o período de descanso entre os rounds em uma luta de boxe tradicional',
+            opcao: ['1 minuto','3 minutos','2 minutos','30 segundos']
+        },
+        {
+            questao: 'Qual é o termo técnico para um soco desferido com a mão não dominante em uma luta de boxe',
+            opcao: ['Direto','Jab','Gancho','Cruzado']
+        },
+        {
+            questao: 'Qual é o termo para a posição defensiva em que um boxeador cobre sua cabeça e torso com os braços e luvas',
+            opcao: ['Guarda','Clinch','Esquiva','Jab']
         }
     ]
+
 </script>

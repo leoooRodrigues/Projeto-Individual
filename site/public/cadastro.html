@@ -46,9 +46,7 @@
 
   <div class="login">
     <div class="erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-      </div>
+      <div class="card_erro" id="cardErro"></div>
     </div>
     <div class="container">
       <div class="card card-cadastro">
@@ -214,7 +212,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        cpfServer: cpfVar,
+        // cpfServer: cpfVar,
         dataServer: dataVar
       }),
     })
@@ -224,7 +222,7 @@
         if (resposta.ok) {
           cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
+          cardErro.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {

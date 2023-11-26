@@ -73,7 +73,7 @@
             <div id="quiz" class="quiz hide">
                 <p id="nmrQuestao"></p>
                 <p id="pergunta"></p>
-                <div class="questionario esconder">
+                <div class="questionario">
                     <div class="btn-left">
                         <button onclick="confirmarQuestao()" id="btn1" class="resposta button"></button>
                         <button onclick="confirmarQuestao()" id="btn2" class="resposta button"></button>
@@ -84,7 +84,15 @@
                     </div>
                 </div>
                 <!-- <button id="confirmar" class="confirmar" onclick="confirmarQuestao()">Confirmar</button> -->
-                
+            </div>
+            <div class="pontuacao" style="display: none;">
+                <div class="texto ">
+                    <h1>Pontuação</h1>
+                    <p id="pontuacao_final"><b></b></p>
+                    <p id="acertou"><b></b></p>
+                    <button class="btn-final">Tentar novamente</button>
+                    <button class="btn-final">Ranking de pontos</button>
+                </div>
             </div>
             <div class="frase">
                 <span id="frase">Frase motivacional</span><br>
@@ -140,7 +148,7 @@
 
     function finalizar(){
         quiz.classList.add('hide')
-        pontuacao.classList.remove('hide')
+        pontuacao.style.display = 'flex'
     }
 
     function limparSessao(){

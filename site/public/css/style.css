@@ -308,6 +308,7 @@ input {
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+  transition: 100ms;
 }
 
 .btn-nav-white:hover{

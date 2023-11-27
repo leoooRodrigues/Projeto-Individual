@@ -165,11 +165,12 @@
         verificarGabarito()
 
         pnt_final.textContent = `Sua pontuação foi de ${parseInt(acertos/gabarito.length*100)}%`
-        corretas.textContent = `Você acertou ${acertos} de 13 questões`
+        corretas.textContent = `Você acertou ${acertos} de ${gabarito.length} questões`
 
         if(acertos <= 3) feedback.textContent = "Você não sabe muito sobre Boxe, estude mais e tente novamente."
-        else if(acertos <= 7) feedback.textContent = "Acertou metade do quiz! está quase lá"
-        else if(acertos <= 11) feedback.textContent = "Você foi muito bem, Parabéns!"
+        else if(acertos <= 6) feedback.textContent = "Quase acertou metade do quiz! tente de novo"
+        else if(acertos == 7) feedback.textContent = "Acertou metade do quiz! está quase lá"
+        else if(acertos <= 12) feedback.textContent = "Você foi muito bem, Parabéns!"
         else feedback.textContent = "Você gabaritou! Uau, você é uma estrela"
     }
 
@@ -220,16 +221,16 @@
         {
             // questão 3
             questao: 'O Boxe é um esporte olímpico ',
-            opcao: ['De jeito nenhum','Parcialmente','Sim','Não sei']
+            opcao: ['De jeito nenhum','Não sei','Sim','Não']
         },
         {
             // questão 4
             questao: 'Em que época que o Boxe se consolidou modalidade esportiva',
-            opcao: ['Grécia Antiga','Revolução Industrial','Era Medieval','Época dos dinossauros']
+            opcao: ['na Grécia Antiga','na Revolução Industrial','na Era Medieval','na Época dos dinossauros']
         },
         {
             // questão 5
-            questao: 'Quem é considerado um dos maiores puglistas de todos os tempos',
+            questao: 'Quem é considerado um dos maiores boxeador de todos os tempos',
             opcao: ['Juju Salimeni','Muhammad Ali','Jojo Toddynho','Mike Tyson']
         },
         {
@@ -269,8 +270,8 @@
         },
         {
             // questão 13
-            questao: 'Quantos rounds típicos uma luta de boxe profissional tem',
-            opcao: ['6','8','10','12']
+            questao: 'Qual o tempo limite de uma luta de boxe profissional',
+            opcao: ['6','8','3','12']
         }
 
     ]

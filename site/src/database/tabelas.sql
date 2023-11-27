@@ -25,12 +25,25 @@ primary key (id,fkAluno)
 
 CREATE TABLE desempenho (
 id int,
-diasPraticados datetime,
-desempenho char(10),
 fkAluno int,
+tecnica char(10),
+forca char(10),
+resistencia char(10),
 foreign key (fkAluno) references aluno(id),
 primary key(id,fkAluno)
 );
+
+select * from desempenho;
+
+select nome, tecnica, forca, resistencia from desempenho 
+	join aluno on aluno.id = desempenho.fkAluno
+    where aluno.id = 5;
+
+INSERT INTO desempenho VALUES
+	(1,'3','4','7','3'),
+	(2,'4','5','5','3'),
+	(3,'5','6','6','6');
+	
 
 CREATE TABLE sugestao (
 id int auto_increment,
@@ -64,5 +77,9 @@ select a.nome as aluno, p.nome as professor from aluno as a
 select a.nome as aluno, p.nome as professor, turma.nome as turma from aluno as a
 	JOIN aluno as p
     ON a.fkProfessor = p.id
-    JOIN turma on a.id = fkAluno;
+    JOIN turma on a.id = fkAluno
+    where p.id = 1;
+    
+update aluno set tipo = 'user' 
+	where id = 6;
 

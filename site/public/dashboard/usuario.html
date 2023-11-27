@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="../css/dashboards.css"> -->
     <link rel="stylesheet" href="../css/indexUsuario.css">
-    <!-- <script src="../js/sessao.js"></script> -->
+    <script src="../js/sessao.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -75,23 +75,23 @@
                 <p id="pergunta"></p>
                 <div class="questionario">
                     <div class="btn-left">
-                        <button onclick="confirmarQuestao()" id="btn1" class="resposta button"></button>
-                        <button onclick="confirmarQuestao()" id="btn2" class="resposta button"></button>
+                        <button onclick="detectarClique(this)" id="btn1" class="resposta button"></button>
+                        <button onclick="detectarClique(this)" id="btn2" class="resposta button"></button>
                     </div>
                     <div class="btn-right">
-                        <button onclick="confirmarQuestao()" id="btn3" class="resposta button"></button>
-                        <button onclick="confirmarQuestao()" id="btn4" class="resposta button"></button>
+                        <button onclick="detectarClique(this)" id="btn3" class="resposta button"></button>
+                        <button onclick="detectarClique(this)" id="btn4" class="resposta button"></button>
                     </div>
                 </div>
                 <!-- <button id="confirmar" class="confirmar" onclick="confirmarQuestao()">Confirmar</button> -->
             </div>
-            <div class="pontuacao" style="display: none;">
-                <div class="texto ">
+            <div id="pontuacao" class="quiz hide">
+                <div class="textoFinal ">
                     <h1>Pontuação</h1>
                     <p id="pontuacao_final"><b></b></p>
                     <p id="acertou"><b></b></p>
-                    <button class="btn-final">Tentar novamente</button>
-                    <button class="btn-final">Ranking de pontos</button>
+                    <p id="feedback_var"><b></b></p>
+                    <button class="btn-final" onclick="resetar()">Tentar novamente</button>
                 </div>
             </div>
             <div class="frase">
@@ -114,26 +114,32 @@
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     var i = 0
+    var acertos = 0
+
+    var nmr = document.getElementById('nmrQuestao');
+    var texto = document.getElementById('pergunta');
+    var botao1 = document.getElementById('btn1');
+    var botao2 = document.getElementById('btn2');
+    var botao3 = document.getElementById('btn3');
+    var botao4 = document.getElementById('btn4');
+    var pnt_final = document.getElementById('pontuacao_final');
+    var corretas = document.getElementById('acertou');
+    var feedback = document.getElementById('feedback_var')
 
     function start(){
         comecar.classList.add('hide')
         quiz.classList.remove('hide')
+        pontuacao.classList.add('hide')
         
-        var nmr = document.getElementById('nmrQuestao');
-        var texto = document.getElementById('pergunta');
-        var botao1 = document.getElementById('btn1');
-        var botao2 = document.getElementById('btn2');
-        var botao3 = document.getElementById('btn3');
-        var botao4 = document.getElementById('btn4');
 
         for(;true;){
-            if(i == 10){
+            if(i == 13){
             finalizar()
             break
             
             } else {
 
-                nmr.textContent = 'Questão ' + (i+1) + ' de 10'
+                nmr.textContent = 'Questão ' + (i+1) + ' de 13'
                 texto.textContent = questoes[i].questao
                 botao1.textContent = questoes[i].opcao[0]
                 botao2.textContent = questoes[i].opcao[1]
@@ -143,12 +149,28 @@
             }
         }
         
-        
+    }
+
+    function detectarClique(botao) {
+      var btnClicado = botao.id;
+      console.log("Usuário clicou no botão com ID:", btnClicado);
+      escolhas.push(btnClicado)
+      confirmarQuestao()
+
     }
 
     function finalizar(){
         quiz.classList.add('hide')
-        pontuacao.style.display = 'flex'
+        pontuacao.classList.remove('hide')
+        verificarGabarito()
+
+        pnt_final.textContent = `Sua pontuação foi de ${parseInt(acertos/gabarito.length*100)}%`
+        corretas.textContent = `Você acertou ${acertos} de 13 questões`
+
+        if(acertos <= 3) feedback.textContent = "Você não sabe muito sobre Boxe, estude mais e tente novamente."
+        else if(acertos <= 7) feedback.textContent = "Acertou metade do quiz! está quase lá"
+        else if(acertos <= 11) feedback.textContent = "Você foi muito bem, Parabéns!"
+        else feedback.textContent = "Você gabaritou! Uau, você é uma estrela"
     }
 
     function limparSessao(){
@@ -161,50 +183,96 @@
         start()
     }
 
+    function resetar(){
+        window.location = './usuario.html'
+    }
+
+    function verificarGabarito() {
+      if (escolhas.length === gabarito.length) {
+        for (var i = 0; i < gabarito.length; i++) {
+          if (escolhas[i] === gabarito[i]) {
+            acertos++;
+          }
+        }
+
+        console.log("Número de acertos:", acertos);
+        console.log("Respostas corretas:", escolhas);
+      } else {
+        console.log("Ainda não foram dadas todas as respostas.");
+      }
+    }
+    
+
     var escolhas = []
-    const questoes_certas = [2,3,2,0,1,1,2,0,1,0]
+    const gabarito = ['btn3','btn4','btn3','btn1','btn2','btn3','btn3','btn1','btn2','btn1','btn1','btn3','btn3']
 
     const questoes = [
         {
-            questao: 'O que usado nas mãos para evitar grandes lesões no impacto do golpe ',
+            // questão 1
+            questao: 'O que é usado nas mãos para evitar grandes lesões no impacto do golpe ',
             opcao: ['Travesseiro','Creme','Luva','Panela']
         },
         {
+            // questão 2
             questao: 'Qual é o nome artistico de Acelino Freitas ',
             opcao: ['Esquiva Falcão','Indiana Jones','McQueen','Popó']
         },
         {
+            // questão 3
             questao: 'O Boxe é um esporte olímpico ',
             opcao: ['De jeito nenhum','Parcialmente','Sim','Não sei']
         },
         {
-            questao: 'Quando que o Boxe se consolidou modalidade esportiva',
+            // questão 4
+            questao: 'Em que época que o Boxe se consolidou modalidade esportiva',
             opcao: ['Grécia Antiga','Revolução Industrial','Era Medieval','Época dos dinossauros']
         },
         {
+            // questão 5
             questao: 'Quem é considerado um dos maiores puglistas de todos os tempos',
             opcao: ['Juju Salimeni','Muhammad Ali','Jojo Toddynho','Mike Tyson']
         },
         {
+            // questão 6
             questao: 'Em que parte do corpo um boxeador é mais propenso a receber um "gancho" durante uma luta',
             opcao: ['Panturrilha','Estômago','Queixo','Nariz']
         },
         {
+            // questão 7
             questao: 'Qual é o nome do canto onde os boxeadores descansam entre os rounds durante uma luta de boxe',
             opcao: ['Intervalo','Recesso','Esquina','Descanso']
         },
         {
+            // questão 8
             questao: 'Qual é o período de descanso entre os rounds em uma luta de boxe tradicional',
             opcao: ['1 minuto','3 minutos','2 minutos','30 segundos']
         },
         {
+            // questão 9
             questao: 'Qual é o termo técnico para um soco desferido com a mão não dominante em uma luta de boxe',
             opcao: ['Direto','Jab','Gancho','Cruzado']
         },
         {
+            // questão 10
             questao: 'Qual é o termo para a posição defensiva em que um boxeador cobre sua cabeça e torso com os braços e luvas',
             opcao: ['Guarda','Clinch','Esquiva','Jab']
+        },
+        {
+            // questão 11
+            questao: 'Qual é o termo para um golpe rápido e curto no boxe, geralmente direcionado ao queixo do oponente',
+            opcao: ['Uppercut','Jab','Cross','Hook']
+        },
+        {
+            // questão 12
+            questao: 'O que é uma luta de "shadow boxing" no contexto do boxe',
+            opcao: ['Luta entre sombras','Treino de resistência','Treino de técnica sem um oponente real','Luta noturna ao ar livre']
+        },
+        {
+            // questão 13
+            questao: 'Quantos rounds típicos uma luta de boxe profissional tem',
+            opcao: ['6','8','10','12']
         }
+
     ]
 
 </script>

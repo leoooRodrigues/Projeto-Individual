@@ -111,6 +111,7 @@
   background-color: #bca2f8;
   border: none;
   border-radius: 7px;
+  font-weight: bold;
 }
 
 .button1{
@@ -167,14 +168,28 @@
   gap: 5px;
 }
 
+.textoFinal{
+  font-size: large;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .btn-final{
   border-radius: 8px;
   border: none;
   transition: 100ms;
+  height: 35px;
+  width: 35%;
 }
 
 .btn-final:hover{
   background-color: #db9a45;
-  width: 85%;
+  height: 40px;
   transition: 100ms;
+}
+
+#feedback_var{
+  font-weight: 800;
+
 }

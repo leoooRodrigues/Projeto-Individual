@@ -47,7 +47,8 @@ INSERT INTO desempenho VALUES
 
 CREATE TABLE sugestao (
 id int auto_increment,
-sugestao varchar(250),
+titulo varchar(100),
+descricao varchar(250),
 fkAluno int,
 foreign key (fkAluno) references aluno(id),
 primary key(id,fkAluno)
